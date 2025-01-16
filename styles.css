@@ -22,6 +22,16 @@ h4 {
 	max-height: 50px;
 }
 
+@font-face {
+	font-family: 'Marathon Serial Regular';
+	src: url('Fonts/Marathon-Serial-Regular.ttf') format('truetype');
+}
+
+.lead {
+	font-family: 'Marathon Serial Regular', sans-serif;
+	/* Fallback a sans-serif */
+}
+
 .navbar-nav .nav-link {
 	font-size: 18px;
 	font-weight: 700;
@@ -59,10 +69,32 @@ h4 {
 	font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
-	img[src="./images/logo3.png"] {
-		display: none;
+	.custom-logo {
+			flex: none !important;
+			/* Desactiva d-flex */
+			margin: 0 !important;
+			/* Elimina mx-5 */
+			width: 100%;
+			/* Ajusta el tamaño de la columna */
+		}
+		
+	.responsive-title {
+            font-size: 25px !important; /* Tamaño más pequeño para el título principal */
+            font-weight: bold;
+        }
+
+        .responsive-subtitle {
+            font-size: 50px !important; /* Reducir subtítulos */
+        }
+
+        .responsive-small {
+            font-size: 20px !important; /* Reducir el texto pequeño */
+        }
+
+	.lead{
+		font-size: xx-small;
 	}
 		img[src="./images/Francisco.png"] {
 			height: 300px;
