@@ -24,7 +24,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark shadow-sm w-100" style="background-color: #85bc23;">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./images/logo.png" alt="Logotipo" height="50">
+                <img src="./images/logo.png" alt="Logotipo" height="150">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
 			<div class="container text-center text-white animate__animated animate__fadeIn">
 				<div class="container text-center text-white animate__animated animate__fadeIn">
 					<img src="./images/logoVerde.png" alt="Logotipo" height="120">
-					<img src="./images/logo3.png" alt="Logotipo" height="120">
+					<img src="./images/logo1.png" alt="Logotipo" height="200">
 					<h1 style="margin-top: 20px;">Soluciones Integrales en Contabilidad y Fiscalización</h1>
 					<p></p>
 				</div>
@@ -58,9 +58,9 @@
 	<!-- Sobre Nosotros -->
 	<section id="nosotros" class="py-5">
 		<div class="container text-center">
-			<h2 class="mb-4 text-dark">Sobre Nosotros</h2>
+			<h2 class="mb-4 text-dark subtitle">Sobre Nosotros</h2>
 			<p class="lead text-dark">En <strong>Despacho Fiscal Contable Hackleen Rodríguez</strong>, ofrecemos
-				soluciones personalizadas en contabilidad y fiscalización, respaldadas por más de 10 años de
+				soluciones personalizadas en contabilidad y fiscalización, respaldadas por más de 5 años de
 				experiencia.</p>
 		</div>
 	</section>
@@ -68,9 +68,9 @@
 	<!-- Servicios -->
 	<section id="servicios" class="py-5" style="background-color: #84bc233f;">
 		<div class="container">
-			<h2 class="text-center mb-5 text-dark">Nuestros Servicios</h2>
+			<h2 class="text-center mb-5 text-dark subtitle">Nuestros Servicios</h2>
 			<div class="row text-center">
-				<h4 class="mb-5">Servicios Contables</h4>
+				<h4 class="mb-5 subtitle">Servicios Contables</h4>
 				<div class="col-md-4 mb-4 animate__animated animate__fadeInUp">
 					<div class="icon-box">
 						<i class="fas fa-calculator fa-3x mb-3" style="color: #85bc23;"></i>
@@ -134,7 +134,7 @@
 	<!-- Servicios Fiscales -->
 	<section id="servicios-fiscales" class="py-5">
 		<div class="container">
-			<h4 class="text-center mb-5 text-dark">Servicios Fiscales</h4>
+			<h4 class="text-center mb-5 text-dark subtitle">Servicios Fiscales</h4>
 			<div class="row text-center">
 				<div class="col-lg-4 col-md-6 mb-4 animate__animated animate__fadeInUp">
 					<div class="icon-box">
@@ -164,7 +164,7 @@
 
 	<section id="nosotros" class="py-5" style="background-color:#84bc233f;">
 		<div class="container text-center">
-			<h2 class="mb-4 text-dark">Asesoría Fiscal</h2>
+			<h2 class="mb-4 text-dark subtitle">Asesoría Fiscal</h2>
 			<ul class="list-unstyled text-dark text-start mx-auto" style="font-size: 1.2rem; line-height: 1.8;">
 				<li class="mb-3">
 					<i class="fas fa-check-circle" style="color: #85bc23; margin-right: 10px;"></i>
@@ -190,7 +190,7 @@
 	<!-- Equipo -->
 	<section id="equipo" class="py-5">
 		<div class="container text-center">
-			<h2 class="mb-5">Nuestro Equipo</h2>
+			<h2 class="mb-5 subtitle">Nuestro Equipo</h2>
 			<div class="row">
 				<div class="col-md-6 mb-4 animate__animated animate__fadeIn">
 					<i class="fa-solid fa-user fa-3x" style="color: #85bc23;"></i>
@@ -211,7 +211,7 @@
 	<!-- Contacto -->
 	<section id="contacto" class="py-5" style="background-color: #84bc233f;">
 		<div class="container">
-			<h2 class="text-center mb-4 text-dark">CONTÁCTANOS</h2>
+			<h2 class="text-center mb-4 text-dark subtitle">CONTÁCTANOS</h2>
 			<div class="row">
 				<div class="col-md-6 mb-4">
 					<h5 class="text-dark">Información de Contacto</h5>
@@ -249,6 +249,24 @@
 		</div>
 	</section>
 
+	<!-- Modal -->
+	<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="contactModalLabel">Gracias por contactarnos</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Nos comunicaremos contigo pronto.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Footer -->
 	<footer class="py-3" style="background-color: #302F33; color: white;">
 		<p class="text-center mb-0">© 2024 Despacho Fiscal Contable Hackleen Rodríguez y Asociados. Todos los derechos
@@ -261,7 +279,8 @@
 	<script>
 		document.getElementById('contactForm').addEventListener('submit', function (event) {
 			event.preventDefault();
-			alert('Gracias por contactarnos. Nos comunicaremos contigo pronto.');
+			var myModal = new bootstrap.Modal(document.getElementById('contactModal'));
+			myModal.show();
 		});
 	</script>
 </body>

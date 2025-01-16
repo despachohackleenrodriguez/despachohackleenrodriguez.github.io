@@ -30,6 +30,9 @@ h4 {
 .nav-link:hover {
 	color: #f0f0f0;
 }
+.subtitle {
+	font-weight: bold;
+}
 
 /* Hero Section */
 .hero {
